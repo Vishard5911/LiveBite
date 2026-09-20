@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departmental Store Validations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shape shape1"></div>
+    <div class="background-shape shape2"></div>
+
+    <div class="container">
+        <header>
+            <h1>Luxe Departmental Store</h1>
+            <p>Access your premium shopping experience</p>
+        </header>
+        
+        <nav class="tabs">
+            <button class="tab-btn active" data-target="registration">Register</button>
+            <button class="tab-btn" data-target="login">Login</button>
+            <button class="tab-btn" data-target="profile">Profile</button>
+            <button class="tab-btn" data-target="payment">Payment</button>
+        </nav>
+
+        <main class="form-container">
+            <!-- Registration Form -->
+            <form id="registration" class="form-section active">
+                <h2>Create Account</h2>
+                <div class="input-group">
+                    <label for="reg-firstname">First Name</label>
+                    <input type="text" id="reg-firstname" placeholder="Enter your first name">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="reg-lastname">Last Name</label>
+                    <input type="text" id="reg-lastname" placeholder="Enter your last name">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="reg-email">Email Address</label>
+                    <input type="email" id="reg-email" placeholder="you@example.com">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" placeholder="Create a password">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="reg-confirm-password">Confirm Password</label>
+                    <input type="password" id="reg-confirm-password" placeholder="Confirm your password">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="reg-phone">Phone Number</label>
+                    <input type="text" id="reg-phone" placeholder="(123) 456-7890">
+                    <small class="error-msg"></small>
+                </div>
+                <button type="submit" class="submit-btn">Register Now</button>
+            </form>
+
+            <!-- Login Form -->
+            <form id="login" class="form-section">
+                <h2>Welcome Back</h2>
+                <div class="input-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" placeholder="you@example.com">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password">
+                    <small class="error-msg"></small>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <!-- Profile Form -->
+            <form id="profile" class="form-section">
+                <h2>Your Profile</h2>
+                <div class="input-group">
+                    <label for="prof-fullname">Full Name</label>
+                    <input type="text" id="prof-fullname" placeholder="Update your full name">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="prof-email">Email Address</label>
+                    <input type="email" id="prof-email" placeholder="Update your email">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="prof-address">Delivery Address</label>
+                    <textarea id="prof-address" rows="3" placeholder="Enter your full address"></textarea>
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="prof-dob">Date of Birth</label>
+                    <input type="date" id="prof-dob">
+                    <small class="error-msg"></small>
+                </div>
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+
+            <!-- Payment Form -->
+            <form id="payment" class="form-section">
+                <h2>Secure Payment</h2>
+                <div class="input-group">
+                    <label for="pay-name">Cardholder Name</label>
+                    <input type="text" id="pay-name" placeholder="Name as it appears on card">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-group">
+                    <label for="pay-card">Card Number</label>
+                    <input type="text" id="pay-card" placeholder="XXXX XXXX XXXX XXXX" maxlength="19">
+                    <small class="error-msg"></small>
+                </div>
+                <div class="input-row">
+                    <div class="input-group half-width">
+                        <label for="pay-expiry">Expiry Date</label>
+                        <input type="text" id="pay-expiry" placeholder="MM/YY" maxlength="5">
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="input-group half-width">
+                        <label for="pay-cvv">CVV</label>
+                        <input type="password" id="pay-cvv" placeholder="123" maxlength="3">
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Pay Securely</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

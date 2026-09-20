@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fff3ed;
+  --color-brand-100: #ffe4d3;
+  --color-brand-200: #ffc9a8;
+  --color-brand-300: #ffa373;
+  --color-brand-400: #ff7434;
+  --color-brand-500: #ff5a00;
+  --color-brand-600: #ef4300;
+  --color-brand-700: #c62f02;
+  --color-brand-800: #9d250a;
+  --color-brand-900: #7e210d;
+  --color-brand-950: #440d04;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+body {
+  background-color: #FDFBF7;
+  color: #111827;
+  background-image: 
+    radial-gradient(circle at 15% 50px, #fcebdf, transparent 40%),
+    radial-gradient(#E5E7EB 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px;
+  cursor: default;
+}
+
+/* Bulletproof rule to prevent I-beam cursor on all elements */
+* {
+  cursor: default !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* Restore text cursor and selection for input elements */
+input, textarea, select {
+  cursor: text !important;
+  user-select: auto !important;
+  -webkit-user-select: auto !important;
+}
+
+/* Restore pointer cursor for interactive elements and their children */
+a, button, [role="button"], label, .cursor-pointer,
+a *, button *, [role="button"] *, label *, .cursor-pointer * {
+  cursor: pointer !important;
+}
+
+/* Custom Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 7s ease-in-out infinite 2s;
+}
