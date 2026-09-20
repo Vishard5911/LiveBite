@@ -252,7 +252,7 @@ const Home = () => {
               >
                 {/* Background Full Image */}
                 <img 
-                  src={rest.coverImage ? `http://localhost:5000${rest.coverImage}` : getCoverImage(rest.cuisine, rest._id)} 
+                  src={rest.coverImage ? `${import.meta.env.VITE_API_URL}${rest.coverImage}` : getCoverImage(rest.cuisine, rest._id)} 
                   alt={rest.name}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

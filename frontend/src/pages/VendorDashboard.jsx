@@ -161,7 +161,7 @@ const VendorDashboard = () => {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       // Ensure backend URL is prefixed if absolute path is needed, or relative is fine
-      const fullUrl = `http://localhost:5000${data.imageUrl}`;
+      const fullUrl = `${import.meta.env.VITE_API_URL}${data.imageUrl}`;
       handleItemChange(index, 'image', fullUrl);
     } catch (error) {
       alert("Error uploading image");

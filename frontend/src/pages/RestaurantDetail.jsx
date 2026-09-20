@@ -105,7 +105,7 @@ const RestaurantDetail = () => {
       {/* Immersive Cover Photo */}
       <div className="relative h-[400px] w-full">
         <img 
-          src={restaurant.coverImage ? `http://localhost:5000${restaurant.coverImage}` : getCoverImage(restaurant.cuisine, restaurant._id)} 
+          src={restaurant.coverImage ? `${import.meta.env.VITE_API_URL}${restaurant.coverImage}` : getCoverImage(restaurant.cuisine, restaurant._id)} 
           alt={restaurant.name}
           className="w-full h-full object-cover"
         />
@@ -157,7 +157,7 @@ const RestaurantDetail = () => {
                   
                   {item.image ? (
                     <div className="h-40 w-full overflow-hidden">
-                      <img src={item.image.startsWith('http') ? item.image : `http://localhost:5000${item.image}`} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      <img src={item.image.startsWith('http') ? item.image : `${import.meta.env.VITE_API_URL}${item.image}`} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     </div>
                   ) : (
                     <div className="h-2 bg-gradient-to-r from-brand-400 to-brand-600"></div>

@@ -112,7 +112,7 @@ const Checkout = () => {
                 {cartItems.map((item, idx) => (
                   <div key={idx} className="flex gap-4 items-start">
                     {item.image ? (
-                       <img src={item.image.startsWith('http') ? item.image : `http://localhost:5000${item.image}`} alt={item.name} className="w-16 h-16 rounded-xl object-cover" />
+                       <img src={item.image.startsWith('http') ? item.image : `${import.meta.env.VITE_API_URL}${item.image}`} alt={item.name} className="w-16 h-16 rounded-xl object-cover" />
                     ) : (
                       <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-gray-400">
                         <Utensils className="w-6 h-6" />
